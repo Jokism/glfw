@@ -20,7 +20,7 @@ project "GLFW"
 
     filter "system:windows"
     systemversion "latest"
-    staticruntime "On"
+    staticruntime "off"
 
     files
     {
@@ -40,11 +40,19 @@ project "GLFW"
         "_GLFW_WIN32",
         "_CRT_SECURE_NO_WARNINGS"
     }
+    
+    filter
+    {
+        "configurations:Debug",
+        runtime "Debug"
+        symbols "on"
+    }
 
     filter
     {
-        "system:windows",
-        "configurations:Release"
+        "configurations:Release",
+        runtime "Release
+        optimize "on"
     }
 
     buildoptions "/MT"
