@@ -47,4 +47,4 @@ project "GLFW"
         "configuration:Release"
     }
 
-    buildoptions "/MT
+    buildoptions "/MT"
