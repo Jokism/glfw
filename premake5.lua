@@ -46,7 +46,7 @@ project "GLFW"
         symbols "on"
 
     filter "configurations:Release"
-        runtime "Release
+        runtime "Release"
         optimize "on"
 
     buildoptions "/MT"
